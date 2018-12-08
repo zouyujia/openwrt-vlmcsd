@@ -16,7 +16,6 @@ OpenWrt repository for ${PACKAGE}
 Binaries built from this repository on $DATE can be downloaded from http://${USER}.github.io/${REPO}/tree/gh-pages
 EOF
 git add -A
-popd
 #git pull
 git commit -a -m "Deploy Travis build $TRAVIS_BUILD_NUMBER to gh-pages"
 #git push -fq origin gh-pages:gh-pages > /dev/null 2>&1 || exit 1
