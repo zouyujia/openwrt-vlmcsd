@@ -13,7 +13,7 @@ DATE=$(date "+%Y-%m-%d")
 cat > README.md <<EOF
 OpenWrt repository for ${PACKAGE}
 ========
-Binaries built from this repository on $DATE can be downloaded from http://${USER}.github.io/${REPO}/tree/gh-pages
+Binaries built from this repository on $DATE can be downloaded from http://${GH_USER}.github.io/${GH_REPO}/tree/gh-pages
 EOF
 git add -A
 #git pull
