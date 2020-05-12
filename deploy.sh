@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /tmp/
-git clone https://${USER}:${TOKEN}@github.com/${USER}/${REPO}.git --branch gh-pages \
+git clone https://${GH_USER}:${TOKEN}@github.com/${GH_USER}/${GH_REPO}.git --branch gh-pages \
 --single-branch gh-pages > /dev/null 2>&1 || exit 1 # so that the key does not leak to the logs in case of errors
 cd gh-pages || exit 1
 git config user.name "cokebar"
@@ -13,7 +13,7 @@ DATE=$(date "+%Y-%m-%d")
 cat > README.md <<EOF
 OpenWrt repository for ${PACKAGE}
 ========
-Binaries built from this repository on $DATE can be downloaded from http://${USER}.github.io/${REPO}/tree/gh-pages
+Binaries built from this repository on $DATE can be downloaded from http://${GH_USER}.github.io/${GH_REPO}/tree/gh-pages
 EOF
 git add -A
 #git pull
